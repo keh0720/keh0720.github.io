@@ -1,0 +1,56 @@
+title: Recent posts
+description: 기억하고 싶은 것들
+author: Memory stash
+github: https://github.com/keh0720
+about: commit to memory
+disqus_shortname: memorystash
+google_analytics: UA-154748479-1
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+#    - icon: fa-facebook
+#      link: "#"
+#    - icon: fa-twitter
+#      link: "#"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/in/ui-hyeok-kwon-6012a2137/"
+      #    - icon: fa-stack-exchange
+      #link: "#"
+    - icon: fa-github
+      link: "https://github.com/keh0720"
+
+      #share:
+      #  twitter_username: 
+      #  fb_appid: 
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: Portfolio
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://keh0720.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
