@@ -6,7 +6,7 @@ permalink: /about/
 
 # Ui-hyeok Kwon (권의혁)
 
-* Backend Programmer
+* Backend developer
 * JAVA & Spring
 * Public Cloud (AWS, Azure)
 
