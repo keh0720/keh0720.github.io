@@ -1,65 +1,110 @@
 ---
+title: Jekyll post
 layout: post
-title:  "Welcome to Simply Grey"
-date:   2013-12-23 00:18:23 +0700
-categories: [jekyll]
+date: 2018-10-09
+description: A complete post.
+image: 3.jpg
+categories: ["c"]
 ---
-SimplyGrey is a simple, easy to use theme for Jekyll that compromises of mainly grey colours. A lot of people enjoy the simplistic look of grey and also find it easier to read.
 
-## Why use Simply Grey?
-There are lots of reasons why I think you should use Simply Grey but I will list the main ones that I believe are more of benefit to you, the user.
+Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`
 
-+	<em>Easy to use and setup</em> - Jekyll has a huge range of documentation to get you started writing posts and the Simply Grey theme makes your blog look beautiful.
-+	<em>Easy configuration</em> - I developed this theme in order to be as customisable as possible. If you want to add more links to the navigation bar, all you have to do is edit the _config.yaml file and the `urls` part of it.
-+	<em>You can change it</em> - After being released with the MIT license (like Jekyll itself) you are free to change and basically do anything you want to this theme provided you keep the copyright notice in the files and distribute the license with it. 
+[Link to another page](./another-page.html).
 
-## Jekyll
-Jekyll is a static site generator developed in ruby that generates websites from markdown and many other formats. The benefit of this is that you can have a highly customisable blog where you can generate posts by writing easy markdown code whilst still retaining the small memory imprint that Jekyll has. 
+There should be whitespace between paragraphs.
 
-### Code Snippets
-Code Snippets are one of the main reasons why I love Jekyll and I think you will too. All code snippets become highlighted with great colours when you write the code in markdown. Here is an example of highlighted Ruby code in a weather application that I have made.
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-{% highlight ruby %}
-#!/usr/bin/env ruby
+# Header 1
 
-require 'json'
-require 'net/http'
-require 'libnotify'
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-def parsejson
-    file = "http://api.openweathermap.org/data/2.5/find?q=London&mode=json"
-    response = Net::HTTP.get_response(URI.parse(file))
-    weatherjson = response.body
-    actual = JSON.parse(weatherjson)
+## Header 2
 
-    # check for errors
-    if actual.has_key? 'Error'
-        raise "error with the url"
-    end
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
 
-    results = []
+### Header 3
 
-    actual["list"].each do |listitem|
-        weather = listitem["weather"]
-        weather.each do |weath|
-            results.push(weath["description"])
-        end
-        main = listitem["main"]
-        temp = main["temp"] - 273.15
-        results.push ("%.2f" % temp)
-    end
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
 
-    return results
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
 end
+```
 
-def notify(summary)
-    Libnotify.show(:body => "Current temperature is: #{summary[1]} degrees celsius.\nCurrent description of conditions: #{summary[0]}", :summary => "Weather Update", :timeout => 10)
-end
+#### Header 4
 
-notify(parsejson())
-{% endhighlight %}
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+##### Header 5
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+###### Header 6
+
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+### There's a horizontal rule below this.
+
+* * *
+
+### Here is an unordered list:
+
+*   Item foo
+*   Item bar
+*   Item baz
+*   Item zip
+
+### And an ordered list:
+
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
+
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+
+```
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+```
+
+```
+The final element.
+```
