@@ -64,7 +64,7 @@ Configuration file: /Users/uihyeok/dev/github/test-site/_config.yml
 
 default로 4000포트로 실행되어 http://localhost:4000으로 접속하면 아래와 같이 확인 할 수 있다.
 
-![jekyll-test-site](/assets/images/jekyll-test-site.png)
+![jekyll-test-site](/img/jekyll-test-site.png)
 
 # Theme 선택
 ---
@@ -83,7 +83,7 @@ default로 4000포트로 실행되어 http://localhost:4000으로 접속하면 �
 아래와 같이 원하는이름.github.io로 repository를 생성한다.
 fork 했으면 repository 이름을 변경하면 된다.
 
-![create github repository](/assets/images/create-github-repo.png)
+![create github repository](/img/create-github-repo.png)
 
 이 repository로 수정한 내용을 push하면 https://id.github.io로 publish된다. 
 반영되는데 딜레이가 조금 있다.
